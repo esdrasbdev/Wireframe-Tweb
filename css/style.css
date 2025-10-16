@@ -309,8 +309,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 30px;
+  flex-wrap: nowrap;
 }
 
 /* Cada cartão de membro */
@@ -323,6 +323,21 @@ img {
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+}
+.membro.big {
+  position: relative;
+  width: 600px;
+  height: 375px;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.membro.big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .membro:hover {
@@ -383,33 +398,42 @@ img {
 }
 /* FOOTER */
 .footer {
-  background-color: #181818;
-  color: #bbb;
-  padding: 60px 20px 20px;
+  background-color: #1e1f21;
+  color: #c5c5c5;
+  padding: 60px 10%;
 }
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto 40px;
+  gap: 80px;
+  margin-bottom: 40px;
 }
 
 .footer h4 {
   color: #fff;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
+.footer p {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
 .footer-links {
   display: flex;
-  gap: 60px;
+  gap: 80px;
 }
 
 .footer-links ul {
   list-style: none;
+  padding: 0;
 }
 
 .footer-links li {
@@ -419,26 +443,47 @@ img {
 
 .footer-links strong {
   color: #fff;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 10px;
 }
 
+/* Links clicáveis */
+.footer-links a {
+  color: #c5c5c5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38AEF7; 
+}
+
+/* Footer social */
 .footer-bottom {
-  text-align: center;
   border-top: 1px solid #333;
-  padding-top: 15px;
-  font-size: 0.8rem;
-}
-.membro.big {
-  position: relative;
-  width: 600px;
-  height: 375px;
-  color: #fff;
-  overflow: hidden;
-  border-radius: 12px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #888;
 }
 
-.membro.big img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+/* Ícones sociais */
+.footer-bottom .social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-bottom .social a {
+  color: #bbb;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-bottom .social a:hover {
+  color: #38AEF7;
+  transform: translateY(-3px);
 }
