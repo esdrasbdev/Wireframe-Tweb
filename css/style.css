@@ -43,6 +43,7 @@ img {
 
 .nav a:hover {
   color: #007aff;
+  transition: color 0.2s ease;
 }
 
 /*  HERO  */
